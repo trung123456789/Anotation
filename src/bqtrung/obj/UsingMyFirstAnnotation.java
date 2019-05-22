@@ -17,7 +17,7 @@ public class UsingMyFirstAnnotation {
 	// Phần tử 'description' không được khai báo, nó sẽ lấy theo mặc định.
 	@IMyFirstAnnotation(name = "Tom")
 	public void someMethod() {
-
+		
 	}
 
 	// Annotation gắn trên tham số của một phương thức.
@@ -27,5 +27,13 @@ public class UsingMyFirstAnnotation {
 		@IMyFirstAnnotation(name = "Some name")
 		int localVariable = 0;
 
+	}
+	
+	public static void main(String args[]) {
+		 Class<?> clazz = UsingMyFirstAnnotation.class;
+		 
+	        // Kiểm tra xem lớp này có được chú thích (annotate) bởi AnnHtmlUL hay không.
+	        boolean isHtmlUL = clazz.isAnnotationPresent(AnnHtmlUL.class);
+		
 	}
 }
